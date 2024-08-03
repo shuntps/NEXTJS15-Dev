@@ -33,7 +33,8 @@ export async function signUp(
     const existingUsername = await prisma.user.findFirst({
       where: {
         username: {
-          equals: username.toLowerCase(),
+          equals: username,
+          mode: "insensitive",
         },
       },
     });

@@ -21,7 +21,8 @@ export async function login(
     const existingUser = await prisma.user.findFirst({
       where: {
         username: {
-          equals: username.toLowerCase(),
+          equals: username,
+          mode: "insensitive",
         },
       },
     });

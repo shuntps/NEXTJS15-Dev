@@ -39,8 +39,7 @@ export default function UserButton({ className }: UserButtonProps) {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>
-          Logged in as @
-          <span className="font-bold capitalize">{user.username}</span>
+          Logged in as @<span className="font-bold">{user.username}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <Link href={`/users/${user.username}`}>
