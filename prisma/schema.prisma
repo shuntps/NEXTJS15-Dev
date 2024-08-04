@@ -21,7 +21,6 @@ model User {
   posts        Post[]
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
   @@map("users")
 }
@@ -42,7 +41,6 @@ model Post {
   user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
   @@map("posts")
 }
