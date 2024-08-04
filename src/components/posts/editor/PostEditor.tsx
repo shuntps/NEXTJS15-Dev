@@ -5,7 +5,7 @@ import StarterKit from "@tiptap/starter-kit";
 import Placeholder from "@tiptap/extension-placeholder";
 import UserAvatar from "@/components/UserAvatar";
 import { useSession } from "@/app/(main)/SessionProvider";
-import { useSubmitPostMutation } from "@/components/posts/mutations";
+import { useSubmitPostMutation } from "@/components/posts/editor/mutations";
 import LoadingButton from "@/components/LoadingButton";
 import "@/components/posts/editor/styles.css";
 
