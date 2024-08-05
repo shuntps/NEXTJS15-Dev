@@ -2,8 +2,9 @@
 
 import { Loader2 } from "lucide-react";
 
-import { PostsPage } from "@/lib/types";
 import { useInfiniteQuery } from "@tanstack/react-query";
+
+import { PostsPage } from "@/lib/types";
 import Post from "@/components/posts/Post";
 import kyInstance from "@/lib/ky";
 import InfiniteScrollContainer from "@/components/InfiniteScrollContainer";
