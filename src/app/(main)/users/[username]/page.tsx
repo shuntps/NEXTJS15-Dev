@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import FollowButton from "@/components/FollowButton";
 import UserPosts from "@/app/(main)/users/[username]/UserPosts";
 import Linkify from "@/components/Linkify";
+import EditProfileButton from "@/app/(main)/users/[username]/EditProfileButton";
 
 interface PageProps {
   params: { username: string };
@@ -67,7 +68,7 @@ export default async function Page({ params: { username } }: PageProps) {
       <div className="w-full min-w-0 space-y-5">
         <UserProfile user={user} loggedInUserId={loggedInUser.id} />
         <div className="rounded-2xl bg-card p-5 shadow-md">
-          <h2 className="text-center text-2xl font-bold capitalize">
+          <h2 className="text-center text-2xl font-bold">
             {user.displayName}&apos;s posts
           </h2>
         </div>
@@ -101,9 +102,7 @@ async function UserProfile({ user, loggedInUserId }: UserProfileProps) {
       <div className="flex flex-wrap gap-3 sm:flex-nowrap">
         <div className="me-auto space-y-3">
           <div>
-            <h1 className="text-3xl font-bold capitalize">
-              {user.displayName}
-            </h1>
+            <h1 className="text-3xl font-bold">{user.displayName}</h1>
             <div className="text-muted-foreground">@{user.username}</div>
           </div>
           <div>Member since {formatDate(user.createdAt, "MMM d, yyyy")}</div>
@@ -118,7 +117,7 @@ async function UserProfile({ user, loggedInUserId }: UserProfileProps) {
           </div>
         </div>
         {user.id === loggedInUserId ? (
-          <Button>Edit profile</Button>
+          <EditProfileButton user={user} />
         ) : (
           <FollowButton userId={user.id} initialState={followerInfo} />
         )}
