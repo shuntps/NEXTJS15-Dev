@@ -3,9 +3,10 @@
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 
-import { loginSchema, LoginValues } from "@/lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { login } from "@/app/(auth)/login/action";
+
+import { loginSchema, LoginValues } from "@/lib/validation";
+import { login } from "@/app/(auth)/login/actions";
 import {
   Form,
   FormControl,

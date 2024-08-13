@@ -10,7 +10,7 @@ import {
 import { useToast } from "@/components/ui/use-toast";
 import { useUploadThing } from "@/lib/uploadthing";
 import { UpdateUserProfileValues } from "@/lib/validation";
-import { updateUserProfile } from "@/app/(main)/users/[username]/action";
+import { updateUserProfile } from "@/app/(main)/users/[username]/actions";
 import { PostsPage } from "@/lib/types";
 
 export function useUpdateProfileMutation() {

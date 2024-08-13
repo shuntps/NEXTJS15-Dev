@@ -5,9 +5,10 @@ import { redirect } from "next/navigation";
 import { isRedirectError } from "next/dist/client/components/redirect";
 import { cookies } from "next/headers";
 
+import { hash } from "@node-rs/argon2";
+
 import prisma from "@/lib/prisma";
 import { signUpSchema, SignUpValues } from "@/lib/validation";
-import { hash } from "@node-rs/argon2";
 import { lucia } from "@/auth";
 
 // Define an asynchronous function to handle user sign-up

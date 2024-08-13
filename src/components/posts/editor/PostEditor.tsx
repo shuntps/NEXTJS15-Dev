@@ -3,11 +3,12 @@
 import { ClipboardEvent, useRef } from "react";
 import Image from "next/image";
 import { ImageIcon, Loader2, X } from "lucide-react";
-import { useDropzone } from "@uploadthing/react";
 
+import { useDropzone } from "@uploadthing/react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Placeholder from "@tiptap/extension-placeholder";
+
 import UserAvatar from "@/components/UserAvatar";
 import { useSession } from "@/app/(main)/SessionProvider";
 import { useSubmitPostMutation } from "@/components/posts/editor/mutations";

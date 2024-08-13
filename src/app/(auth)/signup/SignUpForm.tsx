@@ -3,6 +3,8 @@
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import LoadingButton from "@/components/LoadingButton";
 import { PasswordInput } from "@/components/PasswordInput";
 import {
@@ -15,7 +17,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { signUpSchema, SignUpValues } from "@/lib/validation";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { signUp } from "@/app/(auth)/signup/actions";
 
 export default function SignUpForm() {

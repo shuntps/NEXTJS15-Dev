@@ -10,7 +10,6 @@ import TrendsSidebar from "@/components/TrendsSidebar";
 import UserAvatar from "@/components/UserAvatar";
 import { formatNumber } from "@/lib/utils";
 import FollowerCount from "@/components/FollowerCount";
-import { Button } from "@/components/ui/button";
 import FollowButton from "@/components/FollowButton";
 import UserPosts from "@/app/(main)/users/[username]/UserPosts";
 import Linkify from "@/components/Linkify";
